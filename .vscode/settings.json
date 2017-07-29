@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "tiny-cms-client/node_modules/": true,
+        "tiny-cms-server/node_modules/": true,
+        "**/*.spec.ts": true
+    }
+}

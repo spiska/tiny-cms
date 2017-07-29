@@ -1,0 +1,28 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>New post</md-card-title>
+  </md-card-header>
+  <md-card-content>
+
+    <div>
+      <md-input-container>
+        <input mdInput [(ngModel)]="currentPost.title" placeholder="Title">
+      </md-input-container>
+    </div>
+
+    <div>
+      <md-input-container>
+        <textarea mdInput [(ngModel)]="currentPost.text" placeholder="Text" rows="5"></textarea>
+      </md-input-container>
+    </div>
+
+    <div>
+      <button md-raised-button (click)="addPost()" [disabled]="!isValid()"><i class="material-icons">add_circle_outline</i> Add</button>
+    </div>
+
+  </md-card-content>
+  <md-card-actions>
+
+  </md-card-actions>
+
+</md-card>

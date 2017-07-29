@@ -1,0 +1,31 @@
+    <md-card>
+        <md-card-header>
+            <md-card-title>Login</md-card-title>
+            <md-card-subtitle>Please enter login your login</md-card-subtitle>
+        </md-card-header>
+        <md-card-content>
+
+            <form class="form-signin" (ngSubmit)="login()" autocomplete="off">
+                <div>
+                    <md-input-container>
+                        <input mdInput name="username" placeholder="Username" [(ngModel)]="model.username" value="" required>
+                    </md-input-container>
+                </div>
+                <div>
+                    <md-input-container>
+                        <input mdInput name="password" type="password" placeholder="Password" [(ngModel)]="model.password" value="" required>
+                    </md-input-container>
+                </div>
+
+                <div>
+                    <button md-raised-button type="submit">Sign in</button>
+                </div>
+
+                <span>Need a new account? <button md-button [routerLink]="['/admin/register']">Register</button></span>
+            </form>
+        </md-card-content>
+        <md-card-actions>
+   
+        </md-card-actions>
+
+    </md-card>

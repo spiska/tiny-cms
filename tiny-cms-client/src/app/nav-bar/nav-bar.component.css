@@ -1,0 +1,54 @@
+.fixed-nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 50px;
+    background-color: #FAFAFA;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+}
+
+.nav-bar-content {
+    margin: 0 auto;
+    padding: 0 2px;
+    height: 50px;
+    max-width: 800px;
+    line-height: 50px;
+}
+
+.nav-bar-link {
+    text-decoration: none;
+}
+
+.nav-bar-link:visited {
+    color: black;
+}
+
+.nav-bar-link-item {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-bar-search-icon {
+    vertical-align: middle;
+    margin-left: 36px;
+    opacity: 0.5;
+}
+
+.nav-bar-search-input {
+    margin-left: 2px;
+    opacity: 0.5;
+    border: 0px;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.nav-bar-user-button {
+    vertical-align: middle;
+    float: right;
+}
