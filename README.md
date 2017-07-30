@@ -2,8 +2,8 @@
 
 TineCMS - simple CMS with basic funcionality
 
-Client - angular, rxJs, bootstrap
-Server - express, mongodb, jwt
+- Client - angular, rxJs, material
+- Server - express, mongodb, jwt
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
