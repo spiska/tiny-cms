@@ -21,6 +21,7 @@ import { MdButtonModule, MdCardModule, MdToolbarModule, MdMenuModule, MdIconModu
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { AdminPostService } from "./admin/admin-post.service";
 import { UserService } from "./user.service";
+import { MarkSearchPhrasePipe } from "app/board/mark-search-phrase.pipe";
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import { UserService } from "./user.service";
     AdminRegisterComponent,
     PageNotFoundComponent,
     AdminPanelComponent,
-    AdminPostComponent
+    AdminPostComponent,
+
+    MarkSearchPhrasePipe
   ],
   imports: [
     RouterModule.forRoot(
