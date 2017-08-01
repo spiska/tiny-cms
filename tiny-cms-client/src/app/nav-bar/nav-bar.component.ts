@@ -9,7 +9,7 @@ import { AdminPostService } from "app/admin/admin-post.service";
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit {
-   public searchString: string;
+  public searchString: string;
 
   constructor(private authenticationService: AuthenticationService,
     private router: Router, private adminPostService: AdminPostService) { }
@@ -36,7 +36,17 @@ export class NavBarComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-   ngOnInit(): void {
+  getCurrentUserFullName(): string {
+    let user = this.authenticationService.getCurentUser();
+
+    if (user) {
+      return user.firstName + ' ' + user.lastName;
+    }
+
+    return null;
+  }
+
+  ngOnInit(): void {
     this.searchString = null;
   }
 }

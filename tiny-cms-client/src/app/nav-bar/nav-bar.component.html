@@ -1,26 +1,33 @@
 <div class="fixed-nav-bar">
   <div class="nav-bar-content">
-    <a class="nav-bar-link" [routerLink]="['/']">
+    <div class="nav-bar-content-left">
+      <a class="nav-bar-link" [routerLink]="['/']">
         <span class="nav-bar-link-item">TinyCMS</span>
       </a>
 
-    <md-icon class="nav-bar-search-icon">search</md-icon>
-    <input type="text" class="nav-bar-search-input" placeholder="Search" [(ngModel)]="searchString" (ngModelChange)="searchStringChanged($event)">
-    <span (click)="clearSearch()" *ngIf="isSearchActive()"><md-icon class="nav-bar-search-icon">clear</md-icon></span>
+      <md-icon class="nav-bar-search-icon">search</md-icon>
+      <input type="text" class="nav-bar-search-input" placeholder="Search" [(ngModel)]="searchString" (ngModelChange)="searchStringChanged($event)">
+      <span (click)="clearSearch()" *ngIf="isSearchActive()"><md-icon class="nav-bar-search-icon">clear</md-icon></span>
+    </div>
 
-    <button md-icon-button [mdMenuTriggerFor]="menu" class="nav-bar-user-button">
-        <md-icon>account_circle</md-icon>
-      </button>
-    <md-menu #menu="mdMenu" class="nav-bar-user-menu">
-      <button *ngIf="!isLogged()" md-menu-item [routerLink]="['/admin/login']">
+    <div class="nav-bar-content-right">
+      <div [mdMenuTriggerFor]="menu">
+        <span class="nav-bar-user-name" *ngIf="isLogged()">{{getCurrentUserFullName()}}</span>
+        <button md-icon-button  class="nav-bar-user-button">
+          <md-icon>account_circle</md-icon>
+        </button>
+      </div>
+      <md-menu #menu="mdMenu" class="nav-bar-user-menu">
+        <button *ngIf="!isLogged()" md-menu-item [routerLink]="['/admin/login']">
         <span>Login</span>
       </button>
-      <button *ngIf="isLogged()" md-menu-item [routerLink]="['/admin']">
+        <button *ngIf="isLogged()" md-menu-item [routerLink]="['/admin']">
         <span>Administration</span>
       </button>
-      <button *ngIf="isLogged()" md-menu-item (click)="logout()">
+        <button *ngIf="isLogged()" md-menu-item (click)="logout()">
         <span>Logount</span>
       </button>
-    </md-menu>
+      </md-menu>
+    </div>
   </div>
 </div>

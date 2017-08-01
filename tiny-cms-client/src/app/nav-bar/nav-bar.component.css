@@ -18,6 +18,14 @@
     line-height: 50px;
 }
 
+.nav-bar-content-left {
+    float: left;
+}
+
+.nav-bar-content-right {
+    float: right;
+}
+
 .nav-bar-link {
     text-decoration: none;
 }
@@ -48,7 +56,10 @@ input:focus {
     outline: none;
 }
 
+.nav-bar-user-name {
+    vertical-align: middle;
+}
+
 .nav-bar-user-button {
     vertical-align: middle;
-    float: right;
 }
