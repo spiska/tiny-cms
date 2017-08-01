@@ -39,3 +39,7 @@ tiny-cms-client/e2e/*.map
 #System Files
 .DS_Store
 Thumbs.db
+
+#Others
+tiny-cms-client/package-lock.json
+tiny-cms-server/package-lock.json
